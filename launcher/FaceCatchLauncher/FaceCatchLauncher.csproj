@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>FaceCatch</AssemblyName>
+    <RootNamespace>FaceCatchLauncher</RootNamespace>
+    <ApplicationIcon>..\..\iconimage.ico</ApplicationIcon>
+    <Title>FaceCatch 面部捕捉</Title>
+    <Authors>Kobeblyat</Authors>
+    <Company>Kobeblyat</Company>
+    <Description>FaceCatch for Garry's Mod</Description>
+    <Copyright>Copyright © 2026 Kobeblyat</Copyright>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\iconimage.ico" Link="iconimage.ico" />
+    <EmbeddedResource Include="..\..\gmod_facetracker.py" LogicalName="Assets.gmod_facetracker.py" />
+    <EmbeddedResource Include="..\..\face_landmarker.task" LogicalName="Assets.face_landmarker.task" />
+    <EmbeddedResource Include="..\..\gmod_addon\facecatch\addon.json" LogicalName="Assets.addon.json" />
+    <EmbeddedResource Include="..\..\gmod_addon\facecatch\README.txt" LogicalName="Assets.addon_readme.txt" />
+    <EmbeddedResource Include="..\..\gmod_addon\facecatch\lua\autorun\client\facecatch.lua" LogicalName="Assets.facecatch.lua" />
+    <EmbeddedResource Include="..\..\gmod_addon\facecatch\lua\autorun\server\facecatch_sv.lua" LogicalName="Assets.facecatch_sv.lua" />
+    <EmbeddedResource Include="..\..\gmod_addon\facecatch\lua\weapons\gmod_tool\stools\facecatch.lua" LogicalName="Assets.facecatch_tool.lua" />
+    <EmbeddedResource Include="Assets\gmcl_gwsockets_win32.dll" LogicalName="Assets.gmcl_gwsockets_win32.dll" />
+    <EmbeddedResource Include="Assets\gmcl_gwsockets_win64.dll" LogicalName="Assets.gmcl_gwsockets_win64.dll" />
+  </ItemGroup>
+</Project>
